@@ -62,6 +62,7 @@ module.exports = {
   extractLinks,
   sendAllWebmentions
 };
+
 /*
 (async () => {
   const URL = 'https://desmondrivet.com/2021/08/25/git-warts';
