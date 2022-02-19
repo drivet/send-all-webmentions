@@ -1,6 +1,6 @@
 {
   "name": "send-all-webmentions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small utlity to send all the webmentions in a URL",
   "main": "index.js",
   "scripts": {
