@@ -37,6 +37,10 @@ const sendAllWebmentions = async (urls) => {
       if (source === target) {
         continue;
       }
+      if (!target.startsWith('https') || !target.startsWith('http')) {
+        continue;
+      }
+      
       report[source][target] = {};
       try {
         console.log(`sending webmention, source: ${source}, target: ${target}`);
@@ -53,6 +57,7 @@ const sendAllWebmentions = async (urls) => {
       } catch(err) {
         console.error(`Error sending webmention: ${source}, ${target}, ${JSON.stringify(err)}`);
       }
+      
     };
   };
   return report;
@@ -63,10 +68,10 @@ module.exports = {
   sendAllWebmentions
 };
 
-/*
+
 (async () => {
   const URL = 'https://desmondrivet.com/2021/08/25/git-warts';
   const report = await sendAllWebmentions(URL);
   console.log(`${JSON.stringify(report)}`);
 })();
-*/
+
