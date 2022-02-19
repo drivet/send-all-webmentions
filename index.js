@@ -68,10 +68,10 @@ module.exports = {
   sendAllWebmentions
 };
 
-
+/*
 (async () => {
   const URL = 'https://desmondrivet.com/2021/08/25/git-warts';
   const report = await sendAllWebmentions(URL);
   console.log(`${JSON.stringify(report)}`);
 })();
-
+*/
