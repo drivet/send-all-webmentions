@@ -47,7 +47,7 @@ const sendAllWebmentions = async (urls) => {
         const result = await webmentionp(source, target);
         report[source][target].status_code = result.res.statusCode;
         if (result.success) {
-          const location = result.res.headers['Location'];
+          const location = result.res.headers['location'];
           if (location) {
             report[source][target].location = location;
           }
